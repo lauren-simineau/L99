@@ -1,0 +1,25 @@
+## this is the contents to copy and paste to the nginx config in digital ocean droplet
+
+server {
+    listen 80;
+    server_name _;
+
+    # Serve React frontend
+    root /var/www/l99/client/build;
+    index index.html;
+
+    # Handle React routes (including /login, /dashboard, etc.)
+    location / {
+        try_files $uri /index.html;
+    }
+
+    # Proxy API requests to Node.js backend
+    location /api/ {
+        proxy_pass http://localhost:3000/api/;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+}
