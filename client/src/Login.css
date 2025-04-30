@@ -1,0 +1,68 @@
+/* Global styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: system-ui, sans-serif;
+    background-color: #F3F4F6;
+  }
+  
+  /* Container */
+  .login-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Login box */
+  .login-box {
+    background-color: white;
+    padding: 2rem 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 360px;
+  }
+  
+  .login-box h2 {
+    text-align: center;
+    color: #111827;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Inputs */
+  .login-box input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    border: 1px solid #D1D5DB;
+    font-size: 1rem;
+    color: #111827;
+    background-color: #fff;
+  }
+  
+  .login-box input:focus {
+    outline: none;
+    border-color: #1D4ED8;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+  }
+  
+  /* Button */
+  .login-box button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #1D4ED8;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-box button:hover {
+    background-color: #1E40AF;
+  }
+  
